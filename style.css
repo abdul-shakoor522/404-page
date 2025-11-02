@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Changed to space-between for better spacing */
+    flex-wrap: wrap; /* Allows items to wrap on small screens */
+}
+
+.nav .logo h1 {
+    color: chartreuse;
+    font-family: cursive;
+}
+
+.nav .links {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap; /* Allows wrapping of links on smaller screens */
+}
+
+.nav .links a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.login-btn {
+    font-weight: 600;
+    font-size: 16px;
+    color: chartreuse;
+    border: 2px solid black;
+    background: transparent;
+    border-radius: 100px;
+    padding: 10px 20px;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap; /* Allows main content to wrap */
+    justify-content: center; /* Centers the content in the main section */
+}
+
+.main .left {
+    width: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.main .right {
+    width: 48%;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.right img {
+    margin-top: 40px;
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto;
+    height: 600px;
+}
+
+.content h1 {
+    font-size: 140px;
+}
+
+.left button {
+    padding: 10px 20px;
+    border-radius: 100px;
+    margin-top: 20px;
+    background-color: chartreuse;
+}
+
+button{
+    cursor: pointer;
+    transition: all 0.23s;
+}
+
+.left button:hover{
+    background: transparent;
+
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .nav{
+        padding: 20px 20px;
+        justify-content: space-between;
+    }
+    .nav .links {
+        gap: 30px;
+        display: none;
+    }
+    .right img{
+        height: 500px;
+    }
+
+    .nav .logo h1 {
+        font-size: 24px; /* Reduce the logo font size for smaller screens */
+    }
+
+    .main .left, .main .right {
+        width: 100%; /* Full width for left and right sections */
+        text-align: center; /* Center the content */
+    }
+
+    .main .left button {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .content h1 {
+        font-size: 80px; /* Reduce heading size on mobile */
+    }
+
+    .main .right img {
+        width: 90%; /* Adjust image width for small screens */
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav .links {
+        gap: 15px;
+        flex-direction: column; /* Stack the links vertically on very small screens */
+        align-items: center;
+    }
+
+    .nav .logo h1 {
+        font-size: 22px; /* Further reduce logo size */
+    }
+
+    .login-btn {
+        padding: 8px 16px;
+        font-size: 14px; /* Make the login button text smaller */
+    }
+
+    .main .left button {
+        font-size: 16px; /* Adjust button text for mobile */
+    }
+
+    .content h1 {
+        font-size: 60px; /* Further reduce heading size */
+    }
+
+    .main .right img {
+        width: 100%; /* Full width for image */
+    }
+}
